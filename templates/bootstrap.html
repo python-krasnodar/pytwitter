@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+    {{ block.super }}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% endblock %}
+
+{% block head %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static "dist/vendors.css" %}" type="text/css" />
+{% endblock %}
+
+{% block body_end %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static "dist/vendors.js" %}"></script>
+{% endblock %}

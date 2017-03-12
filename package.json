@@ -1,0 +1,37 @@
+{
+  "name": "pytwitter",
+  "version": "1.0.0",
+  "description": "This is a project for my portfolio. I created it for fun. This is something like a microblogging system like Twitter.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/python-krasnodar/pytwitter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/python-krasnodar/pytwitter/issues"
+  },
+  "homepage": "https://github.com/python-krasnodar/pytwitter#readme",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-env": "^1.2.1",
+    "css-loader": "^0.27.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "jquery": "^3.1.1",
+    "tether": "^1.4.0",
+    "vue": "^2.2.2"
+  }
+}

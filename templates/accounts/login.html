@@ -1,13 +1,35 @@
-{% extends 'accounts/base.html' %}
+{% extends "bootstrap.html" %}
 
 {% block title %}
     <title>Login</title>
 {% endblock %}
 
-{% block content %}
-    <form method="post" action="{% url 'accounts:login' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Login</button>
-    </form>
+{% block body %}
+    <div class="container" style="margin-top: 32px">
+        <div class="row justify-content-center">
+            <h1>PyTwitter Login</h1>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 32px">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <form method="post" action="{% url 'accounts:login' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="{{ form.username.label }}"
+                               class="form-control-label">{{ form.username.label }}</label>
+                        <input type="text" name="{{ form.username.name }}" id="{{ form.username.name }}"
+                               class="form-control" value="{{ form.username.value|default_if_none:'' }}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.password.label }}" class="form-control-label">{{ form.password.label }}</label>
+                        <input type="password" name="{{ form.password.name }}" class="form-control" id="{{ form.password.name }}" value="{{ form.password.value|default_if_none:'' }}">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}
