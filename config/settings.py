@@ -126,6 +126,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+LOGIN_REDIRECT_URL = 'feeds:index'
+
 try:
     from .local_settings import *
 except ImportError:

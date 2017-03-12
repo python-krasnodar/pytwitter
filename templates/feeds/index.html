@@ -1,0 +1,7 @@
+{% extends 'feeds/base.html' %}
+
+{% block content %}
+    {% for feed in feed_list %}
+        {{ feed.blog.title }}
+    {% endfor %}
+{% endblock %}

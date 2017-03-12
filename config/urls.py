@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.http import HttpResponseRedirect
 
 urlpatterns = [
+    url(r'^$', lambda r: HttpResponseRedirect('feeds/')),
+    url(r'^feeds/', include('feeds.urls', namespace='feeds')),
     url(r'^accounts/', include('accounts.urls', namespace='accounts')),
     url(r'^users/', include('users.urls', namespace='users')),
     url(r'^admin/', admin.site.urls),
